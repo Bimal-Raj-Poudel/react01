@@ -1,35 +1,41 @@
-import { useState } from "react";
- 
+
+import { useState } from 'react';
+
 
 function App() {
-  
- let  [counter, setCounter] = useState(0);
 
+let[counter, setCounter] = useState(0)
 
- const addValue =() =>{
+  // let counter = 15;
 
-  setCounter(counter +2)
-  if (counter<=20 || counter>=0){
-    return(counter);
+  const addValue =() =>{
+   if(counter<=19){
+    // console.log("Value added", Math.random())
+    setCounter(counter + 1)
+
+//  console.log("Add value", counter)
+   }
+
   }
-  console.log("clicked", counter)
- }
-   
-  const decreaseValue =() => {
 
-    setCounter(counter-2)
-    console.log("clicked" , counter)
-  // console.log(" value is decreased", Math.random)
+  const decreaseValue =() =>{
+    if(counter>=1){  // we have to remove this if condition to go to the infinity value in positive or negative.
+    
+    setCounter(counter-1)
+    // console.log("Remove Value", counter);
+    // console.log("value decreased", Math.random())
   }
+}
 
   return (
     <>
-      <h1> welcome to esport</h1>
-      <h2>here the numbers is {counter}</h2>
+     <h1>Hancy nigga on town</h1>
+     <h2>Counter value:{counter}</h2>
 
-      <button onClick={addValue}>Add value</button>
-    <br/>
-    <button onClick={decreaseValue}> Decrease Value</button>
+
+     <button onClick={addValue}>Add Value </button>
+     <br/>
+     <button onClick={decreaseValue}>Remove Value </button>
     </>
   )
 }
