@@ -60,6 +60,7 @@ function PasswordGenerator() {
               <input
                type="checkbox" 
                
+
                />
 
             </div>
